@@ -1,0 +1,362 @@
+:root {
+  --red: rgba(255, 49, 65, 1);
+  --pink: rgba(252, 187, 194, 1);
+  --blue: rgba(13, 104, 147, 1);
+  --yellow: rgba(255, 197, 41, 1);
+  --grey: rgba(127, 155, 168, 1);
+  --red-dark: rgb(189, 40, 53);
+  --pink-dark: rgb(180, 136, 140);
+  --blue-dark: rgb(11, 86, 121);
+  --yellow-dark: rgb(202, 157, 33);
+  --grey-dark: rgb(102, 124, 134);
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  position: relative;
+  color: white;
+  user-select: none;
+  font-family: "Dennis Sans", sans-serif;
+  font-size: 1rem;
+  background: #141316;
+  height: 100vh;
+  padding: 0;
+}
+
+header {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 4em;
+  margin: 100px 100px 100px 20px;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.txt-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.txt-container > h1 {
+  margin-bottom: 50px;
+}
+.construction {
+  margin: 50px 0;
+  top: 100px;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(yellow, black);
+}
+
+.yellow-line {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: yellow;
+  height: 200%;
+  width: 100px;
+  transform: rotate(20deg);
+}
+
+.black {
+  background-color: black;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 200%;
+  width: 100px;
+  transform: rotate(20deg);
+}
+
+.letter {
+  transform: rotate(-20deg);
+  margin-left: 40%;
+}
+
+.construction .black:nth-child(odd) {
+  color: yellow;
+}
+
+.construction .yellow-line:nth-child(even) {
+  color: black;
+}
+
+.mg-t {
+  margin-top: 200px;
+}
+
+.mg-b {
+  margin-bottom: 200px;
+}
+
+.stripe {
+  background-color: rgba(128, 128, 128, 0.808);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 1px;
+  min-width: 300px;
+}
+
+.presTxt {
+  margin: 10px 0;
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.grey {
+  background-color: var(--grey);
+}
+
+.pink {
+  background-color: var(--pink);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.sticky {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.sticky-not-live {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.sticky::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  content: "Live demo";
+  position: absolute;
+  background-color: var(--blue-dark);
+  top: 100%;
+  width: 200%;
+  height: 200%;
+  transition: all 0.5s;
+}
+
+.sticky:hover::after {
+  top: -50%;
+}
+
+.img-container {
+  max-width: 1000px;
+  margin: 50px;
+}
+
+.single-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.screen {
+  position: absolute;
+  background-size: cover;
+  max-width: 700px;
+  min-height: 100%;
+  background-image: url(./assets/elements/screen.png);
+}
+
+.screen-vid {
+  max-width: 700px;
+  height: 440px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+}
+
+footer,
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  flex-direction: column;
+}
+
+.light {
+  color: rgba(255, 255, 255, 0.692);
+}
+
+.little-title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.social-links {
+  margin: 50px 10px;
+}
+
+.elem-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.phone-wrap {
+  max-width: 290px;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+
+  border-radius: 50px;
+}
+
+.media {
+  margin-left: 5px;
+  width: 95%;
+  border-radius: 50px;
+}
+
+.phone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+/* ---------- Container for the orbiting circles animation ---------- */
+#circle-orbit-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  left: 25px;
+}
+
+/* ---------- Inner orbit - This is the circles closest to the central point ---------- */
+.inner-orbit {
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+  scale: 0;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.name {
+  z-index: 10;
+}
+
+/* magnetic button*/
+.home {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -80px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.home-icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.btn {
+  height: 50px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  transition: transform 0.15s linear;
+}
+
+.color-01 span {
+  background: transparent;
+}
