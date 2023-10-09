@@ -58,23 +58,20 @@ section {
 
 .around {
   position: relative;
-  border-radius: 50%;
 }
 
 .portrait {
   position: fixed;
-  top: 0;
-  width: 100vw;
+  transform: translate(-50%);
+  left: 50%;
+  width: 100%;
+  max-width: 1050px;
   height: 100vh;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-image: url(assets/pics/pic1.png);
+  object-fit: cover;
 }
 
 .wrap {
   width: 100%;
-
   left: 50%;
   top: 20px;
   transform: translate(-50%);
@@ -403,4 +400,133 @@ footer,
   display: inline-block;
   transform: translateY(20px);
   transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@media (max-width: 1000px) {
+  body {
+    color: white;
+    user-select: none;
+    font-family: "Dennis Sans", sans-serif;
+    font-size: 0.8rem;
+    background: #141316;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .name-h1,
+  .name-wrap {
+    display: flex;
+    font-size: 2em;
+    position: relative;
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .mouse-pos-list-image {
+    display: none;
+  }
+
+  .work {
+    padding: 0;
+  }
+
+  .textWrap {
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
+
+  .presentation {
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+
+  .contact {
+    position: relative;
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  .cta {
+    font-size: 4em;
+  }
+
+  .bubble {
+    border: 1px solid rgba(255, 255, 255, 0.692);
+    border-radius: 40px;
+    padding: 20px;
+    width: fit-content;
+  }
+  .mail {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .sticky {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    right: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    background-color: rgb(21, 6, 158);
+  }
+
+  footer,
+  .footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 280px) {
+  * {
+    font-size: 1em;
+  }
+
+  .textWrap {
+    padding-left: 10px;
+    font-size: 0.5rem;
+  }
+
+  .cta {
+    font-size: 3em;
+  }
+
+  .sticky {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    right: -15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    background-color: rgb(21, 6, 158);
+  }
+
+  footer,
+  .footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+  }
 }
